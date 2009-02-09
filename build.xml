@@ -6,6 +6,8 @@
   <property name="src" location="src"/>
   <property name="classes" location="classes"/>
   <property name="lib" location="lib"/>
+  <property name="version" value="1.0"/>
+  <property name="jarfile" value="socketservice-${version}.jar"/>
 
   <path id="classpath">
     <pathelement path="${classes}"/>
@@ -20,9 +22,9 @@
           description="Run this target any time you change code or acceptance tests. It will clean, then compile the source, run all the unit test and fintesse acceptance tests."/>
 
   <target name="jar" depends="build" description="generate the jar file">
-    <delete file="socketserver.jar"/>
+    <delete file="${jarfile}"/>
 
-    <jar jarfile="socketserver.jar" basedir="classes">
+    <jar jarfile="${jarfile}" basedir="classes">
       <include name="**/*"/>
       <exclude name="**/*Test.class"/>
       <manifest>
