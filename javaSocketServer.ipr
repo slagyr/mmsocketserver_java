@@ -55,6 +55,9 @@
       <entry name="?*.tld" />
     </wildcardResourcePatterns>
   </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
+  </component>
   <component name="DependenciesAnalyzeManager">
     <option name="myForwardDirection" value="false" />
   </component>
@@ -257,6 +260,9 @@
     <converter id="javaee-modules" />
     <converter id="ror-modules" />
     <converter id="SelenaRunConfToDiana" />
+  </component>
+  <component name="ProjectKey">
+    <option name="state" value="project:///Users/micahmartin/Projects/mmsocketserver_java/javaSocketServer.ipr" />
   </component>
   <component name="ProjectModuleManager">
     <modules>
