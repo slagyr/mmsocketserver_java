@@ -1,13 +1,13 @@
-<project name="Java Socket Server" default="jar" basedir=".">
+<project name="MM Socket Server" default="jar" basedir=".">
     <description>
-        Java Socket Server
+        MM Socket Server - Java
     </description>
 
     <property name="src" location="src"/>
     <property name="classes" location="classes"/>
     <property name="lib" location="lib"/>
     <property name="version" value="1.0"/>
-    <property name="jarfile" value="socketservice-${version}.jar"/>
+    <property name="jarfile" value="mmsocketserver-${version}.jar"/>
 
     <path id="classpath">
         <pathelement path="${classes}"/>
