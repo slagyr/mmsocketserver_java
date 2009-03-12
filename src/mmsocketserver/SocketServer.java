@@ -4,7 +4,7 @@
 // Copyright (C) 2009 Micah Martin, Inc. All rights reserved.
 // Released under the terms of the LGNU Lesser General Public License.
 
-package socketserver;
+package mmsocketserver;
 
 import java.net.Socket;
 

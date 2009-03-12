@@ -1,7 +1,7 @@
 //- Copyright ©2009 Micah Martin.  All Rights Reserved
 //- MMSocketServer and all included source files are distributed under terms of the GNU LGPL.
 
-package socketserver;
+package mmsocketserver;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -88,12 +88,14 @@ public class SocketService
 	{
 		while(threads.size() > 0)
 		{
-			Thread t;
+			Thread t = null;
 			synchronized(threads)
 			{
-				t = threads.getFirst();
+        if(threads.size() > 0)
+				  t = threads.getFirst();
 			}
-			t.join();
+      if(t != null)
+			  t.join();
 		}
 	}
 

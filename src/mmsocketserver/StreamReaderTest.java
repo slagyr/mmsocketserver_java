@@ -1,7 +1,7 @@
 //- Copyright ©2009 Micah Martin.  All Rights Reserved
 //- MMSocketServer and all included source files are distributed under terms of the GNU LGPL.
 
-package socketserver;
+package mmsocketserver;
 
 import junit.framework.TestCase;
 
