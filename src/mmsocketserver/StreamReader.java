@@ -25,10 +25,19 @@ public class StreamReader
 
 	private long bytesConsumed;
 
+  protected String encoding;
+
 	public StreamReader(InputStream input)
 	{
 		this.input = input;
+    this.encoding = "UTF-8";
 	}
+
+  public StreamReader(InputStream input, String encoding)
+	{
+		this.input = input;
+		this.encoding = encoding;
+ 	}
 
 	public void close() throws Exception
 	{
@@ -139,7 +148,7 @@ public class StreamReader
 
 	private String bytesToString(byte[] bytes) throws Exception
 	{
-		return new String(bytes, "UTF-8");
+		return new String(bytes, encoding);
 	}
 
 	private void changeState(State state)

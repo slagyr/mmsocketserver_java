@@ -225,6 +225,18 @@ public class StreamReaderTest extends TestCase
     assertEquals("", readResult);
   }
 
+  public void testDefaultEncoding() throws Exception
+  {
+    assertEquals("UTF-8", reader.encoding);
+  }
+
+  public void testOtherEncoding() throws Exception
+  {
+    output = new PipedOutputStream();
+    StreamReader anotherReader = new StreamReader(new PipedInputStream(output), "ISO-8850-1");
+    assertEquals("ISO-8850-1", anotherReader.encoding);
+  }
+
   private void startReading(ReadThread thread)
   {
     this.thread = thread;
